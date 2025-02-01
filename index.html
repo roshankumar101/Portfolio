@@ -4,8 +4,588 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body{
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header{
+            background-image: url(public/images/portfolio.me/colorback.jpg);
+            background-repeat: no-repeat;
+            background-size: 1300px 575px;
+            background-attachment: fixed;
+            border-radius: 30px;
+            color: white;
+            margin-top: -1.7%;
+            width: 100%;
+            height: 575px;
+        }
+        .shadeheader{
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 50px;
+        }
+        .myheading{
+            padding-top: 30px;
+            padding-left: 50px;
+            padding-bottom: 25px;
+        }
+        .headtop{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .headtopinfo{
+            margin-top: 30px;
+            font-size: 22px;
+            font-family: arial;
+            margin-left: 80px;
+        }
+        .headtopinfo span a{
+            color: white;
+            text-decoration: none;
+            margin-right: 23px;
+        }
+        .headtopinfo span a:hover{
+            color: red;
+        }
+
+        .headmid{
+            margin-top: 240px;
+            color: black;
+        }
+        .headmid p{
+            font-size: 22px;
+            font-family:'Franklin Gothic Medium';
+            color: black;
+            padding-left: 70px;
+            margin-top: -40px;
+        }
+
+        .headbottom{
+            margin-top: 70px;
+        }
+        .mediaicon{
+            margin-top: 20px;
+            margin-left: 70px;
+        }
+        .mediaicon a{
+            margin-right: 30px;
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+        .mediaicon a i{
+            border: 1px solid white;
+            border-radius: 50%;
+            box-shadow: 0px 0px 8px white;
+            padding: 8px;
+            transition: 1s;
+        }
+        .mediaicon i:hover{
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            padding: 8px;
+        }
+        .myheading img{
+            width: 250px;
+            height: 250px;
+            border: 2px solid green;
+            box-shadow: 0px 0px 15px white;
+            border-radius: 250px;
+            margin-top: -300px;
+            margin-right: 80px;
+            margin-top: -245px;
+        }
+        
+        section{
+            color: white;
+        }
+
+
+        #AboutMe{
+            margin-left: 90px;
+            padding-top: 60px;
+            margin-bottom: -50px; 
+            font-family: arial;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .aboutdata{
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid green;
+            border-radius: 30px;
+            margin-top: 50px;
+            margin-left: 90px;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+        .abouttext{
+            font-size: 19px;
+            margin-top: 30px;
+        }
+        .abouttext p{
+            margin-bottom: -15px;
+        }
+        
+        
+        .Edujourney{
+            display: flex;
+            flex-direction: row;
+            margin-left: -3%;
+            margin-top: -8px;
+            font-family: arial;
+            width: 700px;
+            height: 150px;
+            list-style-type: none;
+        }
+        .Edujourney li{
+            margin-right: 2%;
+            background-color: rgb(247, 243, 238);
+            color: white;
+            border-radius: 10px;
+            font-size: 11px;
+            width: 170px;
+            height: 150px;
+            box-shadow: 1px 1px 3px lightpink;
+        }
+        .Educard img{
+            width: 170px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .Educard-text{
+            position: relative;
+            top: -150px;
+            text-align: center;
+        }
+        .Educard dl{
+            margin-left: -80px;
+            margin-bottom: 30px;
+        }
+        .Educard dt{
+            color: grey;
+        }
+
+
+        #Skills{
+            margin-left: 90px;
+            padding-top: 60px;
+            margin-bottom: -50px; 
+            font-family: arial;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .body1{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-top: 5%;
+            margin-left: 4%;
+            font-family: arial;
+            width: 1114px;
+            height: 270px;     
+        }
+        .body1 li{
+            margin-right: 3%;
+            background-color: rgb(247, 243, 238);
+            color: white;
+            border-radius: 10px;
+            width: 250px;
+            height: 270px;
+            box-shadow: 1px 1px 7px lightpink;
+            transition: 0.3s ease-in-out;
+        }
+        .body1 li:hover{
+            transform: scale(1.01);
+        }
+        .body1 p{
+            font-size: 20px;
+            margin-bottom: -13px;
+        }
+        .b1card img{
+            width: 250px;
+            height: 270px;
+            border-radius: 10px;
+        }
+        .b1card-text{
+            position: relative;
+            top: -260px;
+            text-align: center;
+        }
+        .b1card dl{
+            margin-left: -80px;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        .b1card dt{
+            color: grey;
+        }
+        .body1 a{
+            display: block;
+            color: blue;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        .body1 a:active{
+            color: red;
+        }
+        .body1 a:visited{
+            color: lightblue;
+        }
+
+        #Projects{
+            margin-left: 90px;
+            padding-top: 60px;
+            margin-bottom: -50px; 
+            font-family: arial;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .body2{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-top: 5%;
+            margin-left: 4%;
+            font-family: arial;
+            width: 1114px;
+            height: 270px;
+        }
+        .body2 li{
+            margin-right: 3%;
+            background-color: rgb(247, 243, 238);
+            color: white;
+            border-radius: 10px;
+            width: 250px;
+            height: 270px;
+            box-shadow: 1px 1px 7px lightpink;
+            transition: 0.3s ease-in-out;
+        }
+        .b2card img{
+            width: 250px;
+            height: 270px;
+            border-radius: 10px;
+        }
+        .b2card-text{
+            position: relative;
+            top: -260px;
+            text-align: center;
+        }
+        .body2 li:hover{
+            transform: scale(1.01);
+        }
+        .body2 p{
+            font-size: 20px;
+            margin-bottom: -13px;
+        }
+        .body2 a{
+            display: block;
+            color: blue;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        .body2 a:active{
+            color: red;
+        }
+        .body2 a:visited{
+            color: lightblue;
+        }
+
+        
+        footer{
+            color: white;
+        }
+        #ContactUs{
+            padding-top: 60px;
+            font-family: arial;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-    <h1>Roshan Kumar</h1>
+<body background="public/images/portfolio.me/cameraback.jpg">
+
+
+    <header>
+        <div class="shadeheader">
+            <div class="myheading">
+                <span class="headtext">
+
+                    <div class="headtop">
+                        <h1>PORT<span style="color: rgb(235, 111, 10);">FOLIO</span></h1>
+                        <nav class="headtopinfo">
+                            <span>
+                                <a href="#AboutMe">About Me</a>
+                            </span>
+                            <span>
+                                <a href="#Skills">Skills</a>
+                            </span>
+                            <span>
+                                <a href="#Projects">Projects</a>
+                            </span>
+                            <span>
+                                <a href="#ContactUs">Contact Us</a>
+                            </span>
+                        </nav>
+                    </div>
+                    
+                    <div class="headmid">
+                        <h1 style="margin-left: 50px; margin-top: -20px; color: rgb(235, 111, 10); font-size: 50px;">
+                            Roshan Kumar
+                        </h1>
+                        <p>(A NewGen Web Developer)</p>
+
+
+                        
+                        <div class="headbottom">
+                            <p style="color: rgb(155, 153, 153); margin-left: -20px;">know more...</p>
+                            <nav  class="mediaicon">
+                                <span>
+                                    <a href="https://github.com/roshankumar101"><i class="ri-github-fill"></i></a>
+                                </span>
+                                <span>
+                                    <a href="https://www.linkedin.com/in/roshankumar101/"><i class="ri-linkedin-fill"></i></a>
+                                </span>
+                                <span>
+                                    <a href="https://www.instagram.com/roshan__kumar_/"><i class="ri-instagram-fill"></i></a>
+                                </span>
+                            </nav>
+                        </div>
+                    </div>
+                </span>
+
+                <span>
+                    <img src="public/images/portfolio.me/profile.png" alt="" align="right">
+                </span>
+            </div>
+        </div>
+    </header>
+
+
+    
+
+        <section>
+                
+            <nav id="AboutMe">
+                About Me
+            </nav>
+            <div class="aboutdata">
+                <span>
+                    <img src="public/images/portfolio.me/body img.png" alt="" width="380" height="400">
+                </span>
+                <span class="abouttext">
+                    <p>My name is <span style="color: red;">Roshan Kumar Mandal,</span></p>
+                    <p>and I was born in Jharkhand.</p>
+                    <p>I completed my schooling at a regular school in my hometown</p>
+                    <p>and Pursuing my College education in Bengaluru,where</p>
+                    <p>I'm focused on enhancing my programming and web development skills.. </p> 
+                    
+                    
+                    <div style="margin-left: -25px; margin-top: 17px; color: orange;">
+                        <h2>Educational Journey</h2>
+                        <div>
+                            <ul class="Edujourney">
+                
+                                <li class="Educard">
+                                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                                    <div class="Educard-text">
+                                        <h3>2028-2024</h3>
+                                        <dl>
+                                            <dt>PW IOI</dt>
+                                            <dd>COMPUTER SCIENCE</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                
+                                <li class="Educard">
+                                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                                    <div class="Educard-text">
+                                        <h3>2023-2021</h3>
+                                        <dl>
+                                            <dt>Intermediate</dt>
+                                            <dd>HTML</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                
+                                <li class="Educard">
+                                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                                    <div class="Educard-text">
+                                        <h3>2021-2019</h3>
+                                        <dl>
+                                            <dt>Photography</dt>
+                                            <dd>By Mobile</dd>
+                                            <dd>By Camera</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                
+                                <li class="Educard">
+                                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                                    <div class="Educard-text">
+                                        <h3>Editing</h3>
+                                        <dl>
+                                            <dt>Photo Editing</dt>
+                                            <dd>Lightroom</dd>
+                                            <dd>Photoshop</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+
+                        </div>
+
+                    </div> 
+                </span>
+            </div>
+
+            
+            <nav id="Skills">
+                Skills
+            </nav>
+            <ul class="body1">
+                
+                <li class="b1card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b1card-text">
+                        <h2>Programming</h2>
+                        <dl>
+                            <dt>Learning</dt>
+                            <dd>C</dd>
+                            <dd>C++</dd>
+                        </dl>
+                        <dl>
+                            <dt>Bucket list</dt>
+                            <dd>Python</dd>
+                            <dd>Java</dd>
+                            <dd style="font-size: 14px;">and more...</dd>
+                        </dl>
+                    </div>
+                </li>
+                
+                <li class="b1card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b1card-text">
+                        <h2>Web development</h2>
+                        <dl>
+                            <dt>Learning</dt>
+                            <dd>HTML</dd>
+                            <dd>CSS</dd>
+                        </dl>
+                        <dl>
+                            <dt>Bucket list</dt>
+                            <dd>JavaScript</dd>
+                            <dd>React</dd>
+                            <dd>NodeJS</dd>
+                            <dd style="font-size: 14px;">and more...</dd>
+                        </dl>
+                    </div>
+                </li>
+                
+                <li class="b1card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b1card-text">
+                        <h2>Capture</h2>
+                        <dl>
+                            <dt>Photography</dt>
+                            <dd>By Mobile</dd>
+                            <dd>By Camera</dd>
+                        </dl>
+                        <dl>
+                            <dt>Videography</dt>
+                            <dd>Cinematography</dd>
+                            <dd>A roll</dd>
+                            <dd>B roll</dd>
+                        </dl>
+                    </div>
+                </li>
+                
+                <li class="b1card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b1card-text">
+                        <h2>Editing</h2>
+                        <dl>
+                            <dt>Photo Editing</dt>
+                            <dd>Lightroom</dd>
+                            <dd>Photoshop</dd>
+                        </dl>
+                        <dl>
+                            <dt>Video Editing</dt>
+                            <dd>Davinci resolve</dd>
+                            <dd>CapCut</dd>
+                        </dl>
+                    </div>
+                </li>
+                
+            </ul>
+        
+        
+            <nav id="Projects">
+                Projects
+            </nav>
+        
+            <ul class="body2">
+            
+                <li class="b2card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b2card-text">
+                        <h2>Programming</h2>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </li>
+
+                <li class="b2card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b2card-text">
+                        <h2>Web development</h2>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </li>
+                
+                <li class="b2card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b2card-text">
+                        <h2>Video Editing</h2>
+                        <p>10+ projects</p>
+                        <p>Delivered</p>
+                    </div>
+                </li>
+                
+                <li class="b2card">
+                    <img src="public/images/portfolio.me/pexels-skylar-kang-6044198.jpg" alt="">
+                    <div class="b2card-text">
+                        <h2>Website Cloning</h2>
+                        <a href="apple.html">Apple site</a>
+                        <a href="youtube.html">youtube @pw-ioi</a>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </section>
+
+
+        <footer>
+            <nav id="#ContactUs" style="text-align: center;">
+                Contact Us
+            </nav>
+        </footer>
+        
+
 </body>
 </html>
